@@ -174,13 +174,13 @@ export function useInputColors(highlighted: boolean) {
   const backgroundColor = React.useMemo<string>(() => {
     if (theme.dark) {
       if (highlighted) {
-        return Color(theme.colors.primary).hex()
+        return Color('#1AB0A8').hex()
       }
       return Color(theme.colors.surface).lighten(1.2).hex()
     }
 
     if (highlighted) {
-      return Color(theme.colors.primary).lighten(1).hex()
+      return Color('#1AB0A8').lighten(1).hex()
     }
     return Color(theme.colors.surface).darken(0.1).hex()
   }, [highlighted, theme])
