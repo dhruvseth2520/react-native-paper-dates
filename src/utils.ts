@@ -14,7 +14,7 @@ export function useHeaderBackgroundColor() {
   const theme = useTheme()
   return theme.dark && theme.mode === 'adaptive'
     ? overlay(4, theme.colors.surface)
-    : theme.colors.primary
+    : '#1AB0A8'
 }
 
 export function useHeaderColorIsLight() {
@@ -22,7 +22,7 @@ export function useHeaderColorIsLight() {
   const background =
     theme.dark && theme.mode === 'adaptive'
       ? theme.colors.surface
-      : theme.colors.primary
+      : '#1AB0A8'
   return Color(background).isLight()
 }
 
@@ -33,7 +33,7 @@ export function useHeaderTextColor() {
 
 export function useTextColorOnPrimary() {
   const theme = useTheme()
-  const isDark = !Color(theme.colors.primary).isLight()
+  const isDark = !Color('#1AB0A8').isLight()
   return isDark ? '#fff' : '#000'
 }
 
