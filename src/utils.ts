@@ -22,7 +22,7 @@ export function useHeaderColorIsLight() {
   const background =
     theme.dark && theme.mode === 'adaptive'
       ? theme.colors.surface
-      : '#1AB0A8'
+      : theme.colors.primary
   return Color(background).isLight()
 }
 
@@ -33,7 +33,7 @@ export function useHeaderTextColor() {
 
 export function useTextColorOnPrimary() {
   const theme = useTheme()
-  const isDark = !Color('#1AB0A8').isLight()
+  const isDark = !Color(theme.colors.primary).isLight()
   return isDark ? '#fff' : '#000'
 }
 
