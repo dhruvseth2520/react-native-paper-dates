@@ -82,7 +82,7 @@ function SwitchButton({
           style={[
             {
               ...theme.fonts.medium,
-              color: color,
+              color: color
             },
           ]}
         >

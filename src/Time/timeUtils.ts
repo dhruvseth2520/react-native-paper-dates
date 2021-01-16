@@ -148,22 +148,22 @@ export function useSwitchColors(highlighted: boolean) {
   const backgroundColor = React.useMemo<string>(() => {
     if (theme.dark) {
       if (highlighted) {
-        return Color(theme.colors.primary).hex()
+        return Color('#2ABCB3').hex()
       }
       return theme.colors.backdrop
     }
 
     if (highlighted) {
-      return Color(theme.colors.primary).lighten(1).hex()
+      return Color('#2ABCB3').lighten(1).hex()
     }
     return theme.colors.surface
   }, [highlighted, theme])
 
   const color = React.useMemo<string>(() => {
     if (highlighted && !theme.dark) {
-      return theme.colors.primary
+      return '#1AB0A8';
     }
-    return theme.colors.placeholder
+    return theme.colors.placeholder;
   }, [highlighted, theme])
 
   return { backgroundColor, color }
@@ -174,20 +174,20 @@ export function useInputColors(highlighted: boolean) {
   const backgroundColor = React.useMemo<string>(() => {
     if (theme.dark) {
       if (highlighted) {
-        return Color('#1AB0A8').hex()
+        return Color('#2ABCB3').hex()
       }
       return Color(theme.colors.surface).lighten(1.2).hex()
     }
 
     if (highlighted) {
-      return Color('#1AB0A8').lighten(1).hex()
+      return Color('#2ABCB3').lighten(1).hex()
     }
     return Color(theme.colors.surface).darken(0.1).hex()
   }, [highlighted, theme])
 
   const color = React.useMemo<string>(() => {
     if (highlighted && !theme.dark) {
-      return theme.colors.primary
+      return '#1AB0A8'
     }
     return theme.colors.text
   }, [highlighted, theme])

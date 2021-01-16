@@ -81,9 +81,9 @@ function Calendar(
 
   const selectColor = useMemo<string>(() => {
     if (theme.dark) {
-      return Color(theme.colors.primary).hex()
+      return Color('#1AB0A8').hex()
     }
-    return Color(theme.colors.primary).lighten(0.9).hex()
+    return Color('#1AB0A8').lighten(0.9).hex()
   }, [theme])
 
   const scrollMode =
@@ -167,7 +167,7 @@ function Calendar(
             selectingYear={selectingYear}
             onPressDate={onPressDate}
             scrollMode={scrollMode}
-            primaryColor={theme.colors.primary}
+            primaryColor={'#1AB0A8'}
             selectColor={selectColor}
             roundness={theme.roundness}
             disableWeekDays={disableWeekDays}

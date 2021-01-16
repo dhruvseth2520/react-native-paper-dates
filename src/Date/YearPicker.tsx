@@ -79,7 +79,7 @@ function YearPure({
         <View
           style={[
             styles.yearInner,
-            selected ? { backgroundColor: theme.colors.primary } : null,
+            selected ? { backgroundColor: '#1AB0A8' } : null,
           ]}
         >
           <Text

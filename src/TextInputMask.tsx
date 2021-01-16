@@ -88,6 +88,7 @@ function TextInputWithMask(
   return (
     <TextInput
       ref={ref}
+      theme={{ colors: { primary: '#19C2BD', underlineColor: 'transparent', background: 'white' } }}
       {...rest}
       value={controlledValue}
       onChangeText={onInnerChange}

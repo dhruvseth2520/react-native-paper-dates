@@ -62,7 +62,7 @@ export function DatePickerModal(
 
   const isLight = useHeaderColorIsLight()
   const statusBarColor = useMemo<string>(
-    () => Color(theme.colors.primary).darken(0.2).hex(),
+    () => Color('#1AB0A8').darken(0.2).hex(),
     [theme]
   )
 

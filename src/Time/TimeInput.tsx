@@ -76,6 +76,7 @@ function TimeInput(
         ]}
         value={formattedValue}
         maxLength={2}
+        selectionColor='#1AB0A8'
         onFocus={() => setInputFocused(true)}
         onBlur={() => setInputFocused(false)}
         keyboardAppearance={theme.dark ? 'dark' : 'default'}
@@ -93,7 +94,7 @@ function TimeInput(
               borderRadius: theme.roundness,
             },
           ]}
-          rippleColor={Color(theme.colors.primary).fade(0.7).hex()}
+          rippleColor={Color('#1AB0A8').fade(0.7).hex()}
           onPress={() => onPress(clockType)}
           borderless={true}
         >

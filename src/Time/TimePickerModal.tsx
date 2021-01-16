@@ -157,8 +157,9 @@ export function TimePickerModal({
                   accessibilityLabel="toggle keyboard"
                 />
                 <View style={styles.fill} />
-                <Button onPress={onDismiss}>{cancelLabel}</Button>
+                <Button color='#1AB0A8' onPress={onDismiss}>{cancelLabel}</Button>
                 <Button
+                  color='#1AB0A8'
                   onPress={() =>
                     onConfirm({ hours: localHours, minutes: localMinutes })
                   }
