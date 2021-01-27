@@ -8,14 +8,13 @@ export const dayNamesHeight = 44
 
 // TODO: wait for a better Intl api ;-)
 const weekdays = [
-  new Date('2020-08-03'),
-  new Date('2020-08-04'),
-  new Date('2020-08-05'),
-  new Date('2020-08-06'),
-  new Date('2020-08-07'),
-  new Date('2020-08-08'),
-  new Date('2020-08-09'),
-
+  'Su',
+  'Mo',
+  'Tu',
+  'We',
+  'Th',
+  'Fr',
+  'Sa',
 ]
 
 function DayNames({
@@ -27,10 +26,7 @@ function DayNames({
 }) {
   const theme = useTheme()
   const shortDayNames = React.useMemo<string[]>(() => {
-    const formatter = new Intl.DateTimeFormat(locale, {
-      weekday: 'narrow',
-    })
-    return weekdays.map((date) => formatter.format(date))
+    return weekdays;
   }, [locale])
 
   return (
